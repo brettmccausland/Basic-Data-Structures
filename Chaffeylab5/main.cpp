@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
-void Exercise12_1();
-void Exercise12_3();
-void Exercise12_4();
-void Exercise12_6();
-void Exercise12_9();
-void Exercise12_15();
-void Exercise12_16();
+#include"list.h"
+void Exercise12_1();//brett()
+void Exercise12_3();//andre()
+void Exercise12_4();//rex()
+void Exercise12_6();//elizabeth
+void Exercise12_9();//brett()
+void Exercise12_15();//rex
+void Exercise12_16();//elizabeth
 using namespace std;
 int main()
 {
@@ -47,7 +48,7 @@ void Exercise12_9()
 {
   // Write a member function
   // List::get_size()
-  // that computes the num- ber of elements in the list,
+  // that computes the number of elements in the list,
   // by counting the elements until the end of the list
   // is reached.
 }
