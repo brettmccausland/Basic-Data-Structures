@@ -157,6 +157,7 @@ DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf \
 		../../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf \
+		../Chaffeylab5/.qmake.stash \
 		../../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf \
@@ -172,9 +173,13 @@ DIST          = ../../../Qt/5.4/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/exceptions.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/lex.prf \
-		../Chaffeylab5/Chaffeylab5.pro list.h \
-		iterator.h \
-		node.h ../Chaffeylab5/main.cpp
+		../Chaffeylab5/Chaffeylab5.pro Booklist.h \
+		Bookiterator.h \
+		Booknode.h \
+		node.h \
+		stacklist.h \
+		queuelist.h \
+		linkedlist.h ../Chaffeylab5/main.cpp
 QMAKE_TARGET  = Chaffeylab5
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = Chaffeylab5
@@ -322,6 +327,7 @@ Makefile: ../Chaffeylab5/Chaffeylab5.pro ../../../Qt/5.4/clang_64/mkspecs/macx-c
 		../../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf \
 		../../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf \
 		../../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf \
@@ -446,6 +452,7 @@ Makefile: ../Chaffeylab5/Chaffeylab5.pro ../../../Qt/5.4/clang_64/mkspecs/macx-c
 ../../../Qt/5.4/clang_64/mkspecs/features/qt_config.prf:
 ../../../Qt/5.4/clang_64/mkspecs/macx-clang/qmake.conf:
 ../../../Qt/5.4/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt/5.4/clang_64/mkspecs/features/exclusive_builds.prf:
 ../../../Qt/5.4/clang_64/mkspecs/features/default_pre.prf:
 ../../../Qt/5.4/clang_64/mkspecs/features/mac/default_pre.prf:
@@ -506,9 +513,9 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../Chaffeylab5/main.cpp ../Chaffeylab5/list.h \
+main.o: ../Chaffeylab5/main.cpp ../Chaffeylab5/stacklist.h \
 		../Chaffeylab5/node.h \
-		../Chaffeylab5/iterator.h
+		../Chaffeylab5/linkedlist.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Chaffeylab5/main.cpp
 
 ####### Install

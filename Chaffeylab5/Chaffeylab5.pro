@@ -9,7 +9,11 @@ include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    list.h \
-    iterator.h \
-    node.h
+    Booklist.h \
+    Bookiterator.h \
+    Booknode.h \
+    node.h \
+    stacklist.h \
+    queuelist.h \
+    linkedlist.h
 

@@ -1,19 +1,23 @@
 #include <iostream>
 #include <vector>
-#include"list.h"
-void Exercise12_1();//brett()
-void Exercise12_3();//andre()
-void Exercise12_4();//rex()
-void Exercise12_6();//elizabeth
-void Exercise12_9();//brett()
-void Exercise12_15();//rex
-void Exercise12_16();//elizabeth
+//#include"Booklist.h"
+#include"stacklist.h"
+#include"queuelist.h"
+void Exercise12_1();//
+void Exercise12_3();//
+void Exercise12_4();//
+void Exercise12_6();//
+void Exercise12_9();//
+void Exercise12_15();//done
+void Exercise12_16();//done
+ //void downsize(List<string>& names);
 using namespace std;
 int main()
 {
   system("clear");
 
-
+     //Exercise12_15();
+    Exercise12_16();
 
   return 0;
 }
@@ -23,11 +27,19 @@ void Exercise12_1()
   // void downsize(list<string>& names)
   // that removes every second value from a linked list.
 }
+// void downsize(List<string>& names)
+// {
+//     for(List::iterator a=names.begin();a!=names.end();a++)
+//     {
+//         a++;
+//         Iterator List::erase(Iterator a);
+//     }
+// }
+
 void Exercise12_3()
 {
   // Write a function sort that sorts the elements of a
-  // linked list (without
-  // copying them into a vector).
+  // linked list (without copying them into a vector).
 }
 void Exercise12_4()
 {
@@ -57,10 +69,35 @@ void Exercise12_15()
   //Implement a Stack class, using a linked list of strings. Supply
   //operations size, push, pop, and top, just like in the standard
   //stack template.
+    Stack<int> r;
+    int a=1;
+    int b=a+1;
+    int c=9;
+    r.Push(a);
+    r.Push(b);
+    r.Push(c);
+    int i =r.top();
+    cout<<"top: "<<i<<endl;
+    r.pop();
+    i=r.top();
+    cout<<"top after pop: "<<i<<endl;
 }
 void Exercise12_16()
 {
   //Implement a Queue class, using a linked list of strings.
   //Supply operations size, push, pop, front, and back,
   //just like in the standard stack template.
+    Queue<int> myQ;
+    int a=1;
+    int b=a+1;
+    int c=9;
+    myQ.Push(a);
+    myQ.Push(b);
+    myQ.Push(c);
+    int i =myQ.front();
+    cout<<"top: "<<i<<endl;
+    cout<<"my Q: ";
+    myQ.printlist();
+    cout<<endl;
+
 }

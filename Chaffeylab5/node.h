@@ -1,28 +1,67 @@
-#ifndef NODE_H
-#define NODE_H
-#include<istream>
+#ifndef NODE
+#define NODE
+
+#include<iostream>
 using namespace std;
-class Node
+
+
+
+template<typename Item_Type>
+
+struct node
 {
-public:
-   Node(string s);
-   ~Node();
-private:
-   string data;
-   Node* previous;
-   Node* next;
-friend class List;
-friend class Iterator;
+    node(const Item_Type& item);
+    node();
+    node(node* Next);
+    node(node<Item_Type>* Next,Item_Type Item );
+    ~node();
+
+
+    Item_Type item;
+    node<Item_Type>* next;
+
+     template <typename T>
+    friend ostream& operator << (ostream& outs, const node<T>& printMe);
+
 };
-Node::Node(string s)
+template<typename Item_Type>
+node<Item_Type>::node()
 {
-   data = s;
-   previous = NULL;
-   next = NULL;
+    item=NULL;
+    next=NULL;
+}
+template<typename Item_Type>
+node<Item_Type>::node(const Item_Type& Item)
+{
+    item=Item;
+    next=NULL;//nullptr;
+}
+template<typename Item_Type>
+node<Item_Type>::node(node<Item_Type>* Next)
+{
+    item=NULL;
+    next=Next;
+}
+template<typename Item_Type>
+node<Item_Type>::node(node<Item_Type>* Next,Item_Type Item )
+{
+    item=Item;
+    next=Next;
+}
+//--------destructor--------
+template<typename Item_Type>
+node<Item_Type>::~node<Item_Type>()
+{
+
+}
+//=============operator===============
+template<typename T>
+ostream& operator << (ostream& outs, const node<T>& printMe)
+{
+        outs<< printMe.item;
+        return outs;
 }
 
-Node::~Node()
-{
 
-}
-#endif // NODE_H
+#endif // NODE
+

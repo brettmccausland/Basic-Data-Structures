@@ -1,7 +1,7 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
-#include "node.h"
-#include "list.h"
+#include "Booknode.h"
+#include "Booklist.h"
 
 class Iterator
 {
