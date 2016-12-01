@@ -38,12 +38,7 @@ void Exercise12_1()
 
 void Exercise12_3()
 {
-  // Write a function sort that sorts the elements of a
-  // linked list (without copying them into a vector).
-}
-void Exercise12_4()
-{
-  #include <list>
+#include <list>
 #include <algorithm>
 #include <iostream>
 #include <string>
@@ -87,6 +82,10 @@ int main()
 
 	return 0;
 }
+}
+void Exercise12_4()
+{
+  
 }
 void Exercise12_6()
 {
