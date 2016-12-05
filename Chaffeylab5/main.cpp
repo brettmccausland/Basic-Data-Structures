@@ -3,6 +3,7 @@
 //#include"Booklist.h"
 #include"stacklist.h"
 #include"queuelist.h"
+#include "list"
 void Exercise12_1();//
 void Exercise12_3();//
 void Exercise12_4();//
@@ -10,31 +11,50 @@ void Exercise12_6();//
 void Exercise12_9();//
 void Exercise12_15();//done
 void Exercise12_16();//done
- //void downsize(List<string>& names);
+
+//template<typename T>
+void downsize(list<string> &names);
+void lprint(list<string>& names);
+
 using namespace std;
 int main()
 {
   system("clear");
 
      //Exercise12_15();
-    Exercise12_16();
-
+    //Exercise12_16();
+    Exercise12_1();
   return 0;
 }
 void Exercise12_1()
 {
-  //Write a function
-  // void downsize(list<string>& names)
-  // that removes every second value from a linked list.
+    list<string> names;
+    names.push_back("ron");
+     names.push_back("tom");
+      names.push_back("greg");
+       names.push_back("jeff");
+        names.push_back("lexie");
+         names.push_back("sparkles");
+         downsize(names);
+         lprint(names);
 }
-// void downsize(List<string>& names)
-// {
-//     for(List::iterator a=names.begin();a!=names.end();a++)
-//     {
-//         a++;
-//         Iterator List::erase(Iterator a);
-//     }
-// }
+//template<typename T>
+void downsize(list<string>& names)
+ {
+     for(list<string>::iterator a=names.begin();a!=names.end();a++)
+     {
+          if(a!=names.end())
+          {
+             a++;
+            names.erase(a);
+         }
+     }
+ }
+void lprint(list<string>& names)
+ {
+     for(list<string>::iterator a=names.begin();a!=names.end();a++)
+         cout<<*a<<" ";
+ }
 
 void Exercise12_3()
 {
