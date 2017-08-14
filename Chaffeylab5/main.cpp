@@ -4,7 +4,7 @@
 #include"stacklist.h"
 #include"queuelist.h"
 #include "list"
-void Exercise12_1();//
+void Exercise12_1();//done
 void Exercise12_3();//
 void Exercise12_4();//
 void Exercise12_6();//
@@ -37,6 +37,7 @@ void Exercise12_1()
          names.push_back("sparkles");
          downsize(names);
          lprint(names);
+         cout<<endl;
 }
 //template<typename T>
 void downsize(list<string>& names)
@@ -58,54 +59,17 @@ void lprint(list<string>& names)
 
 void Exercise12_3()
 {
-#include <list>
-#include <algorithm>
-#include <iostream>
-#include <string>
-using namespace std;
-
-class Node {
-public:
-	Node(const string& data) : Data(data) {
-	}
-	string Data;
-};
-
-bool NodeLess(const Node& n1, const Node& n2) {
-	return n1.Data < n2.Data;
-}
-
-int main() 
-{
-
-	std::list<Node> l;
-	l.push_back(Node("d"));
-	l.push_back(Node("c"));
-	l.push_back(Node("a"));
-	l.push_back(Node("b"));
-
-	for (auto i = l.begin(); i != l.end(); i++)
-	{
-		cout << i->Data.c_str() << " ";
-	}
-	cout << endl;
-
-	l.sort(NodeLess);
-
-	for (auto i = l.begin(); i != l.end(); i++)
-	{
-		cout << i->Data.c_str() << " ";
-	}
-	cout << endl;
-	
-	system("pause");
-
-	return 0;
-}
+  // Write a function sort that sorts the elements of a
+  // linked list (without copying them into a vector).
 }
 void Exercise12_4()
 {
-  
+  //Write a function merge that merges two lists into one,
+  //alternating ele- ments from each list until the end of one
+  //of the lists has been reached, then appending the
+  //remaining elements of the other list. For example,
+  //merging the lists containing A B C and D E F G H
+  //should yield the list A D B E C F G H.
 }
 void Exercise12_6()
 {
